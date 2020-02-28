@@ -1,5 +1,9 @@
 .git
 
+# travis-ci
+.travis.yml
+
+
 README.md
 CHANGELOG.md
 docker-compose.yml

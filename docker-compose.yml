@@ -16,5 +16,5 @@ services:
 # $   docker-compose build
 
 # run project
-# $   docker-compose run app sh -c "django-admin.py startproject app ./"
+# $   docker-compose run app sh -c "django-admin.py staproject app ./"
       

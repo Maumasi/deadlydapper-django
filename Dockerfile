@@ -3,13 +3,14 @@ MAINTAINER Maumasi Consulting
 
 ENV PYTHONUNBUFFERED=1
 
+# RUN adduser -D maumasi
+# USER maumasi
+WORKDIR /var/www/deadlydapper
+
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
-RUN mkdir /add
-WORKDIR /app
-COPY ./app /app
+# RUN mkdir /app
 
-RUN adduser -D maumasi
-USER maumasi
+COPY ./build ./
 

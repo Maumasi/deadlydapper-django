@@ -16,5 +16,17 @@ services:
 # $   docker-compose build
 
 # run project
-# $   docker-compose run app sh -c "django-admin.py staproject app ./"
+# $   docker-compose run app sh -c "django-admin.py startproject app ./"
+
+
+# run unit tests
+# $   docker-compose run app sh -c "pytohn manage.py test && flake8"
+
+
+# main project
+# $   docker-compose run app sh -c "python manage.py startapp core"
+
+
+# make DB migrations
+# $   docker-compose run app sh -c "python manage.py makemigrations core"
       

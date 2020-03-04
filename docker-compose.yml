@@ -22,6 +22,8 @@ services:
 # run unit tests
 # $   docker-compose run app sh -c "pytohn manage.py test && flake8"
 
+# $   clear && docker-compose run app sh -c "python manage.py test" && echo '\n\n--:: Style Guide ::--\n' &&  flake8
+
 
 # main project
 # $   docker-compose run app sh -c "python manage.py startapp core"
@@ -29,4 +31,6 @@ services:
 
 # make DB migrations
 # $   docker-compose run app sh -c "python manage.py makemigrations core"
+
+
       

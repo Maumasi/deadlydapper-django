@@ -12,5 +12,5 @@ RUN pip install -r /requirements.txt
 
 # RUN mkdir /app
 
-COPY ./build ./
+COPY ./app ./
 

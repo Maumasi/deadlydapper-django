@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./build:/var/www/deadlydapper
+      - ./app:/var/www/deadlydapper
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
 

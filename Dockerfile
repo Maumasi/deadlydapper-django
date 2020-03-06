@@ -8,9 +8,15 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /var/www/deadlydapper
 
 COPY ./requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
 
-# RUN mkdir /app
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .temp-build-deps \
+            gcc libc-dev linux-headers postgresql-dev
+
+RUN pip install -r /requirements.txt
+# remove temp dependancies
+RUN apk del .temp-build-deps
+
 
 COPY ./app ./
 
